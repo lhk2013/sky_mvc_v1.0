@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- 
+ **
+ * COPYRIGHT (C) 2012 3KW. ALL RIGHTS RESERVED.
+ *
+ * No part of this publication may be reproduced, stored in a retrieval system,
+ * or transmitted, on any form or by any means, electronic, mechanical, photocopying,
+ * recording, or otherwise, without the prior written permission of 3KW.
+ *
+ * Created By: Liuzh
+ * Created On: 2013-2-26 10:33:24
+ *
+ * Amendment History:
+ * 
+ * Amended By       Amended On      Amendment Description
+ * ************     ***********     *********************************************
+ *
+ **
+ -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haikuo.sky.mb.mapper.UserMapper">
+	<resultMap id="UserMapper" type="com.haikuo.sky.mb.bo.User">
+		<result column="id" property="id"/>
+		<result column="name" property="userName"/>
+		<result column="pwd" property="password"/>
+	</resultMap>
+	
+	<sql id="commonColumns">
+		 id
+		, name
+		, pwd 
+	</sql>
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="UserMapper">
+		 SELECT  
+		 id
+		, name
+		, pwd 
+		FROM t_user  WHERE id=#{userId}
+	</select>
+</mapper>
