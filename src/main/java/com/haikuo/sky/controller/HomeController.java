@@ -74,4 +74,19 @@ public class HomeController {
 	
 		return "test";
 	}
+	
+	/**
+	 * Simply selects the home view to render by returning its name.
+	 * @throws Exception 
+	 */
+	@RequestMapping(value = "/test3", method = RequestMethod.GET)
+	public String velocityHtml2(Model model) throws Exception {
+		logger.info("Welcome home! The client locale is {}.", "我去");
+		
+	
+		
+		model.addAttribute("serverTime", "2015年12月23日16:48:09你不在啦啦啦啦" );
+	
+		return "test";
+	}
 }
