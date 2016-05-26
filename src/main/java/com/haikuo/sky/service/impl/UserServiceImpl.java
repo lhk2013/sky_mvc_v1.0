@@ -72,7 +72,7 @@ public class UserServiceImpl extends BaseDaoImpl<User> implements UserService{
 		com.haikuo.sky.entity.User u = new com.haikuo.sky.entity.User();
 //		u.setId(userId);
 		u.setPasswd("lhk123456");
-		u.setName("cannotdo");
+		u.setName("我不知道啊");
 		session.save(u);
 		return u;
 	}

@@ -137,9 +137,9 @@
 		</dependency>
 		<!-- c3p0 -->
 		<dependency>
-		  <groupId>com.mchange.c3p0</groupId>
-		  <artifactId>com.springsource.com.mchange.v2.c3p0</artifactId>
-		  <version>0.9.1.2</version>
+		  <groupId>com.mchange</groupId>
+		  <artifactId>c3p0</artifactId>
+		  <version>0.9.5-pre3</version>
 		</dependency>
 		<!-- sping-test -->
 		<dependency>
